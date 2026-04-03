@@ -1,1 +1,5 @@
-<?php echo("Pozdrav");
+<?php
+
+echo("Pozdrav");
+
+include "katalog.php";
