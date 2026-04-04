@@ -21,37 +21,18 @@
             </tr>
         </thead>
         <tbody>
+            <?php foreach($proizvodi as $pr):?>
             <tr>
-                <td>Laptop</td>
-                <td>500</td>
+                <td><?php echo $pr['naziv']; ?></td>
+                <td><?php echo $pr['cena']; ?></td>
                 <td>
                     <form action="" method="post">
-                        <input type="hidden" name="id" value="id-1">
+                        <input type="hidden" name="id" value=<?php echo $pr['id']; ?>>
                         <input type="submit" name="submit" value="Kupi">
                     </form>
                 </td>
             </tr>
-
-            <tr>
-                <td>Kisobran</td>
-                <td>200</td>
-                <td>
-                    <form action="" method="post">
-                        <input type="hidden" name="id" value="id-2">
-                        <input type="submit" name="submit" value="Kupi">
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td>Lopta</td>
-                <td>100</td>
-                <td>
-                    <form action="" method="post">
-                        <input type="hidden" name="id" value="id-3">
-                        <input type="submit" name="submit" value="Kupi">
-                    </form>
-                </td>
-            </tr>
+            <?php endforeach; ?>
 
         </tbody>
     </table>
